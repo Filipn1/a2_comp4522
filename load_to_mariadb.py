@@ -34,7 +34,7 @@ from typing import Optional
 import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import Engine
-
+from etl import run_part2_etl
 
 def make_engine(user: str, password: str, host: str, port: int, db: Optional[str] = None, autocommit: bool = False) -> Engine:
     db_part = f"/{db}" if db else ""
@@ -316,6 +316,7 @@ def main():
     run_checks(db_engine)
     print("\nAll done ✅")
 
+run_part2_etl(engine, out_dir="etl_outputs")
 
 if __name__ == "__main__":
     main()
