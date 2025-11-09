@@ -11,9 +11,9 @@ Requires:
     pip install SQLAlchemy mysql-connector-python pandas python-dotenv
 
 Usage:
-    python setup_and_load_edu_sys.py \
+    python load_to_mariadb.py \
         --host localhost --port 3306 \
-        --root_user root --root_pass "" \
+        --root_user root --root_pass "2631_IXb" \
         --db_name edu_sys --db_user edu_user --db_pass edupass \
         --departments_csv ./departments.csv \
         --students_csv ./students.csv \
